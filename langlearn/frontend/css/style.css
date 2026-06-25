@@ -1,0 +1,469 @@
+/* frontend/css/style.css
+   Visual identity: "index card" academic system — a paper-and-ledger feel,
+   evoking the physical card catalogs used to track curriculum structure
+   before software did. Warm paper background, a single ink-blue accent,
+   monospaced stage numbering (this content genuinely IS sequential —
+   the 11-stage lesson architecture is a fixed, ordered protocol).
+*/
+
+:root {
+  --paper: #faf7f0;
+  --paper-raised: #ffffff;
+  --ink: #1f2421;
+  --ink-soft: #5a5f5a;
+  --rule: #ddd6c4;
+  --accent: #2b4c6f;       /* ink-blue */
+  --accent-soft: #e8eef3;
+  --accent-text: #1c3650;
+  --gold: #9c7a3c;          /* used sparingly: CEFR / mastery markers */
+  --gold-soft: #f5ecd9;
+  --locked: #b3aa92;
+  --success: #3f6b4a;
+  --success-soft: #e7f0e9;
+  --shadow: 0 1px 2px rgba(31, 36, 33, 0.06), 0 4px 12px rgba(31, 36, 33, 0.04);
+
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-body: "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+  --font-arabic: "Noto Naskh Arabic", "Traditional Arabic", serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+body[dir="rtl"] {
+  font-family: var(--font-arabic), var(--font-body);
+}
+
+/* ---------- Layout shell ---------- */
+.app-shell {
+  display: grid;
+  grid-template-columns: 220px 280px 320px 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+[dir="rtl"] .app-shell {
+  direction: rtl;
+}
+
+.topbar {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-raised);
+}
+
+.topbar .brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.topbar .brand .mark {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.topbar h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.locale-switch {
+  display: flex;
+  gap: 4px;
+  background: var(--accent-soft);
+  border-radius: 8px;
+  padding: 3px;
+}
+.locale-switch button {
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  color: var(--accent-text);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.locale-switch button.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---------- Columns ---------- */
+.col {
+  overflow-y: auto;
+  border-inline-end: 1px solid var(--rule);
+  padding: 16px 14px;
+}
+.col:last-child { border-inline-end: none; }
+
+.col-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 2px;
+}
+.col-header h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  margin: 0;
+  font-weight: 500;
+}
+
+.btn-add {
+  font-size: 12px;
+  font-family: var(--font-body);
+  color: var(--accent-text);
+  background: var(--accent-soft);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-add:hover { background: #d9e4ec; }
+
+/* ---------- List items (levels / units / lessons) ---------- */
+.list-item {
+  display: block;
+  width: 100%;
+  text-align: inherit;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: var(--ink);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.list-item:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+.list-item.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.list-item .item-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.list-item .item-code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gold);
+  background: var(--gold-soft);
+  padding: 1px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.list-item .item-title {
+  font-size: 14px;
+  font-weight: 600;
+  flex: 1;
+}
+.list-item .item-meta {
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+  font-family: var(--font-mono);
+}
+.list-item .item-desc {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+.lock-icon { color: var(--locked); font-size: 11px; }
+
+.empty-state {
+  font-size: 13px;
+  color: var(--ink-soft);
+  padding: 20px 8px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ---------- Detail pane (stages) ---------- */
+.detail-pane {
+  padding: 24px 28px;
+  overflow-y: auto;
+}
+
+.lesson-header {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+.lesson-header h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin: 0 0 6px;
+}
+.lesson-header .objective {
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.stage-track {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.stage-card {
+  display: flex;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.stage-card:last-child { border-bottom: none; }
+
+.stage-num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  width: 28px;
+  flex-shrink: 0;
+  padding-top: 3px;
+}
+
+.stage-icon {
+  font-size: 18px;
+  width: 28px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.stage-body { flex: 1; min-width: 0; }
+
+.stage-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.stage-title {
+  font-weight: 600;
+  font-size: 14.5px;
+}
+.stage-key-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink-soft);
+  background: var(--accent-soft);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+.stage-instructions {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.stage-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+.stage-status.empty { color: var(--locked); }
+.stage-status.filled { color: var(--success); }
+.stage-status .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: currentColor;
+  display: inline-block;
+}
+
+.skill-tags { display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap; }
+.skill-tag {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+.stage-edit-btn {
+  font-size: 12px;
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  color: var(--accent-text);
+  align-self: flex-start;
+  margin-top: 4px;
+  transition: border-color 0.15s, background 0.15s;
+}
+.stage-edit-btn:hover { border-color: var(--accent); background: var(--accent-soft); }
+
+/* ---------- CEFR reference panel ---------- */
+.cefr-panel {
+  background: var(--gold-soft);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+.cefr-panel h3 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin: 0 0 8px;
+}
+.cefr-panel p {
+  font-size: 13px;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+.cefr-skill-label {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--accent-text);
+}
+
+/* ---------- Modal (add unit / lesson / edit stage) ---------- */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(31, 36, 33, 0.45);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100;
+}
+.modal {
+  background: var(--paper-raised);
+  border-radius: 12px;
+  padding: 24px;
+  width: 560px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+}
+.modal h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+.modal-locale-block {
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.modal-locale-block .locale-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: block;
+}
+.field { margin-bottom: 10px; }
+.field label {
+  display: block;
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+}
+.field input, .field textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 7px 10px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.field textarea { resize: vertical; min-height: 50px; }
+.field input[dir="rtl"], .field textarea[dir="rtl"] { text-align: right; }
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 7px;
+  font-size: 13.5px;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+.btn-primary:hover { background: var(--accent-text); }
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-soft);
+  padding: 8px 18px;
+  border-radius: 7px;
+  font-size: 13.5px;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.json-editor {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  min-height: 120px;
+}
+
+/* ---------- Misc ---------- */
+.placeholder-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 14px;
+}
+
+.error-banner {
+  background: #f6e3e1;
+  color: #7a2e22;
+  border: 1px solid #d99a8e;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin: 12px 24px;
+  font-size: 13px;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }

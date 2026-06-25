@@ -1,0 +1,20 @@
+{
+  "code": "de-track",
+  "target_language_code": "de",
+  "cefr_framework_version": "2020",
+  "is_active": true,
+  "translations": {
+    "ar": {
+      "name": "مسار تعلّم اللغة الألمانية",
+      "description": "مسار كامل من A1 إلى C2 لتعلّم اللغة الألمانية، مبني على إطار CEFR ومبدأ التعلّم القائم على الإتقان (Mastery Learning)."
+    },
+    "de": {
+      "name": "Deutsch-Lernpfad",
+      "description": "Ein vollständiger Lernpfad von A1 bis C2 zum Erlernen der deutschen Sprache, basierend auf dem GER-Rahmen und dem Prinzip des Mastery Learning."
+    },
+    "en": {
+      "name": "German Learning Track",
+      "description": "A complete A1 to C2 learning path for German, built on the CEFR framework and the mastery-learning principle."
+    }
+  }
+}

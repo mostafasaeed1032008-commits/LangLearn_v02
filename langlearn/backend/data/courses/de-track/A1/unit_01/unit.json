@@ -1,0 +1,35 @@
+{
+  "sort_order": 1,
+  "is_locked": false,
+  "translations": {
+    "ar": {
+      "title": "تقديم نفسك",
+      "communicative_objective": "أن يكون المتعلم قادرًا على تقديم نفسه والآخرين، وطرح أسئلة بسيطة عن الشخص (الاسم، مكان السكن، الجنسية) والإجابة عنها.",
+      "description": "أول وحدة في مستوى A1، تغطي أبسط تفاعل تواصلي: التعارف."
+    },
+    "de": {
+      "title": "Sich vorstellen",
+      "communicative_objective": "Der Lernende kann sich und andere vorstellen sowie einfache Fragen zur Person (Name, Wohnort, Nationalität) stellen und beantworten.",
+      "description": "Die erste Einheit auf Niveau A1, sie behandelt die einfachste kommunikative Interaktion: das Kennenlernen."
+    },
+    "en": {
+      "title": "Introducing yourself",
+      "communicative_objective": "The learner can introduce themselves and others, and ask/answer simple personal questions (name, place of residence, nationality).",
+      "description": "The first unit at A1 level, covering the most basic communicative interaction: introductions."
+    }
+  },
+  "mastery_criteria": {
+    "ar": {
+      "criteria_text": "إنهاء كل دروس الوحدة بنجاح وتحقيق 80% على الأقل في تقييم الوحدة النهائي.",
+      "min_score_pct": 80
+    },
+    "de": {
+      "criteria_text": "Alle Lektionen der Einheit erfolgreich abschließen und mindestens 80% in der Abschlussbewertung der Einheit erreichen.",
+      "min_score_pct": 80
+    },
+    "en": {
+      "criteria_text": "Successfully complete all lessons in the unit and score at least 80% on the final unit assessment.",
+      "min_score_pct": 80
+    }
+  }
+}

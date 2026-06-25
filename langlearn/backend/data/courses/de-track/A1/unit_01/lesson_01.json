@@ -1,0 +1,145 @@
+{
+  "sort_order": 1,
+  "translations": {
+    "ar": {
+      "title": "مرحبًا! — التحية والاسم",
+      "objective": "أن يتمكن المتعلم من تحية شخص ما وقول اسمه والسؤال عن اسم الآخر."
+    },
+    "de": {
+      "title": "Hallo! — Begrüßung und Name",
+      "objective": "Der Lernende kann jemanden begrüßen, seinen eigenen Namen sagen und nach dem Namen einer anderen Person fragen."
+    },
+    "en": {
+      "title": "Hello! — Greeting and name",
+      "objective": "The learner can greet someone, say their own name, and ask for another person's name."
+    }
+  },
+  "mastery_criteria": {
+    "ar": { "criteria_text": "إتمام مهمة الاستماع والمحادثة النهائية بدقة 80% على الأقل.", "min_score_pct": 80 },
+    "de": { "criteria_text": "Die abschließende Hör- und Sprechaufgabe mit mindestens 80% Genauigkeit abschließen.", "min_score_pct": 80 },
+    "en": { "criteria_text": "Complete the final listening and speaking task with at least 80% accuracy.", "min_score_pct": 80 }
+  },
+  "stages": [
+    {
+      "stage_key": "new_sounds",
+      "sort_order": 1,
+      "skills": ["listening"],
+      "translations": {
+        "ar": { "title": "أصوات جديدة", "instructions": "استمع وكرر: حروف الـ 'ch' و 'sch' في الألمانية." },
+        "de": { "title": "Neue Laute", "instructions": "Hören und nachsprechen: die Laute 'ch' und 'sch'." },
+        "en": { "title": "New Sounds", "instructions": "Listen and repeat: the German sounds 'ch' and 'sch'." }
+      },
+      "content": null
+    },
+    {
+      "stage_key": "new_vocabulary",
+      "sort_order": 2,
+      "skills": ["reading", "listening"],
+      "translations": {
+        "ar": { "title": "مفردات جديدة", "instructions": "كلمات التحية الأساسية: Hallo، Guten Tag، Tschüss." },
+        "de": { "title": "Neuer Wortschatz", "instructions": "Grundlegende Begrüßungswörter: Hallo, Guten Tag, Tschüss." },
+        "en": { "title": "New Vocabulary", "instructions": "Basic greeting words: Hallo, Guten Tag, Tschüss." }
+      },
+      "content": null
+    },
+    {
+      "stage_key": "new_structures",
+      "sort_order": 3,
+      "skills": ["reading"],
+      "translations": {
+        "ar": { "title": "تراكيب جديدة", "instructions": "التركيب: 'Ich heiße ___' و 'Wie heißt du؟'" },
+        "de": { "title": "Neue Strukturen", "instructions": "Die Struktur: 'Ich heiße ___' und 'Wie heißt du?'" },
+        "en": { "title": "New Structures", "instructions": "The structure: 'Ich heiße ___' and 'Wie heißt du?'" }
+      },
+      "content": null
+    },
+    {
+      "stage_key": "reading",
+      "sort_order": 4,
+      "skills": ["reading"],
+      "translations": {
+        "ar": { "title": "قراءة", "instructions": "اقرأ حوارًا قصيرًا بين شخصين يتعارفان." },
+        "de": { "title": "Lesen", "instructions": "Lies einen kurzen Dialog zwischen zwei Personen, die sich kennenlernen." },
+        "en": { "title": "Reading", "instructions": "Read a short dialogue between two people meeting for the first time." }
+      },
+      "content": null
+    },
+    {
+      "stage_key": "listening",
+      "sort_order": 5,
+      "skills": ["listening"],
+      "translations": {
+        "ar": { "title": "استماع", "instructions": "استمع لنفس الحوار بصوت متحدثين أصليين." },
+        "de": { "title": "Hören", "instructions": "Hör dir denselben Dialog von Muttersprachlern an." },
+        "en": { "title": "Listening", "instructions": "Listen to the same dialogue spoken by native speakers." }
+      },
+      "content": null
+    },
+    {
+      "stage_key": "speaking",
+      "sort_order": 6,
+      "skills": ["speaking"],
+      "translations": {
+        "ar": { "title": "محادثة", "instructions": "كرر الحوار بصوت عالٍ، ثم مثّله مع شريك." },
+        "de": { "title": "Sprechen", "instructions": "Sprich den Dialog laut nach und übe ihn dann mit einem Partner." },
+        "en": { "title": "Speaking", "instructions": "Repeat the dialogue aloud, then role-play it with a partner." }
+      },
+      "content": null
+    },
+    {
+      "stage_key": "writing",
+      "sort_order": 7,
+      "skills": ["writing"],
+      "translations": {
+        "ar": { "title": "كتابة", "instructions": "اكتب 3 جمل تعرّف فيها عن نفسك." },
+        "de": { "title": "Schreiben", "instructions": "Schreib 3 Sätze, in denen du dich selbst vorstellst." },
+        "en": { "title": "Writing", "instructions": "Write 3 sentences introducing yourself." }
+      },
+      "content": null
+    },
+    {
+      "stage_key": "grammar_discovery",
+      "sort_order": 8,
+      "skills": ["reading"],
+      "translations": {
+        "ar": { "title": "استكشاف القاعدة", "instructions": "لاحظ: لماذا نقول 'heiße' مع 'ich' و 'heißt' مع 'du'؟ حاول تخمين القاعدة." },
+        "de": { "title": "Grammatik entdecken", "instructions": "Beobachte: Warum sagen wir 'heiße' bei 'ich' und 'heißt' bei 'du'? Versuche die Regel zu erraten." },
+        "en": { "title": "Grammar Discovery", "instructions": "Notice: why do we say 'heiße' with 'ich' but 'heißt' with 'du'? Try to guess the rule." }
+      },
+      "content": null
+    },
+    {
+      "stage_key": "grammar_explanation",
+      "sort_order": 9,
+      "skills": ["reading"],
+      "translations": {
+        "ar": { "title": "شرح القاعدة", "instructions": "شرح تصريف الفعل 'heißen' في صيغة المضارع مع الضمائر الأساسية." },
+        "de": { "title": "Grammatikerklärung", "instructions": "Erklärung der Konjugation von 'heißen' im Präsens mit den Grundpronomen." },
+        "en": { "title": "Grammar Explanation", "instructions": "Explanation of the present-tense conjugation of 'heißen' with basic pronouns." }
+      },
+      "content": null
+    },
+    {
+      "stage_key": "final_task",
+      "sort_order": 10,
+      "skills": ["speaking", "writing"],
+      "translations": {
+        "ar": { "title": "المهمة النهائية", "instructions": "سجّل فيديو قصير (30 ثانية) تعرّف فيه عن نفسك بالألمانية." },
+        "de": { "title": "Abschlussaufgabe", "instructions": "Nimm ein kurzes Video (30 Sekunden) auf, in dem du dich auf Deutsch vorstellst." },
+        "en": { "title": "Final Task", "instructions": "Record a short video (30 seconds) introducing yourself in German." }
+      },
+      "content": null
+    },
+    {
+      "stage_key": "assessment",
+      "sort_order": 11,
+      "skills": ["listening", "reading", "speaking", "writing"],
+      "translations": {
+        "ar": { "title": "تقييم", "instructions": "تقييم شامل لمهارات الدرس الأربع لتحديد جاهزية الانتقال للدرس التالي." },
+        "de": { "title": "Bewertung", "instructions": "Umfassende Bewertung der vier Fertigkeiten der Lektion zur Feststellung der Bereitschaft für die nächste Lektion." },
+        "en": { "title": "Assessment", "instructions": "Comprehensive assessment of the lesson's four skills to determine readiness for the next lesson." }
+      },
+      "content": null
+    }
+  ]
+}

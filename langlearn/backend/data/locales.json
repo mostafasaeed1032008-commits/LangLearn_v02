@@ -1,0 +1,5 @@
+[
+  { "code": "ar", "name_native": "العربية", "direction": "rtl" },
+  { "code": "de", "name_native": "Deutsch", "direction": "ltr" },
+  { "code": "en", "name_native": "English", "direction": "ltr" }
+]

@@ -1,0 +1,36 @@
+{
+  "cefr_code": "A1",
+  "sort_order": 1,
+  "is_locked": false,
+  "translations": {
+    "ar": {
+      "name": "المستوى الأول — A1",
+      "description": "الاستخدام الأولي للغة: عبارات يومية مألوفة وجمل بسيطة جدًا لتلبية حاجات ملموسة."
+    },
+    "de": {
+      "name": "Niveau A1",
+      "description": "Elementare Sprachverwendung: vertraute, alltägliche Ausdrücke und ganz einfache Sätze."
+    },
+    "en": {
+      "name": "Level A1",
+      "description": "Basic user, elementary stage: familiar everyday expressions and very basic phrases."
+    }
+  },
+  "cefr_reference": {
+    "global_scale": {
+      "de": {
+        "overall": "Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen."
+      }
+    },
+    "self_assessment_grid": {
+      "de": {
+        "listening": "Ich kann vertraute Wörter und ganz einfache Sätze verstehen, die sich auf mich selbst, meine Familie oder auf konkrete Dinge um mich herum beziehen, vorausgesetzt es wird langsam und deutlich gesprochen.",
+        "reading": "Ich kann einzelne vertraute Namen, Wörter und ganz einfache Sätze verstehen, z. B. auf Schildern, Plakaten oder in Katalogen.",
+        "spoken_interaction": "Ich kann mich auf einfache Art verständigen, wenn mein Gesprächspartner bereit ist, etwas langsamer zu wiederholen oder anders zu sagen, und mir dabei hilft zu formulieren, was ich zu sagen versuche. Ich kann einfache Fragen stellen und beantworten, sofern es sich um unmittelbar notwendige Dinge und um sehr vertraute Themen handelt.",
+        "spoken_production": "Ich kann einfache Wendungen und Sätze gebrauchen, um Leute, die ich kenne, zu beschreiben und um zu beschreiben, wo ich wohne.",
+        "writing": "Ich kann eine kurze einfache Postkarte schreiben, z. B. Feriengrüsse. Ich kann auf Formularen, z. B. in Hotels, Namen, Adresse, Nationalität usw. eintragen."
+      }
+    },
+    "_note": "النصوص الألمانية هنا مأخوذة حرفيًا من جدول 1 (Globalskala) وشبكة التقييم الذاتي (Raster zur Selbstbeurteilung) المرفوعين من المستخدم. تُستخدم فقط كمرجع تحقق (validation reference) عند تصميم outcomes الوحدات والدروس — وليست محتوى تعليمي يُعاد إنشاؤه."
+  }
+}

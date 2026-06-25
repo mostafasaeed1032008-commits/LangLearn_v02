@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Learning System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body dir="rtl">
+
+  <div class="app-shell">
+
+    <div class="topbar">
+      <div class="brand">
+        <span class="mark">A1&ndash;C2</span>
+        <h1 id="app-title">نظام تعلّم اللغات</h1>
+      </div>
+      <div class="locale-switch" id="locale-switch"></div>
+    </div>
+
+    <div class="col" id="levels-col">
+      <div class="col-header">
+        <h2 id="levels-header">المستويات</h2>
+      </div>
+      <div id="levels-list"></div>
+    </div>
+
+    <div class="col" id="units-col">
+      <div id="cefr-panel"></div>
+      <div class="col-header">
+        <h2 id="units-header">الوحدات</h2>
+        <button class="btn-add" id="btn-add-unit" style="display:none;">+ إضافة وحدة</button>
+      </div>
+      <div id="units-list"></div>
+    </div>
+
+    <div class="col" id="lessons-col">
+      <div class="col-header">
+        <h2 id="lessons-header">الدروس</h2>
+        <button class="btn-add" id="btn-add-lesson" style="display:none;">+ إضافة درس</button>
+      </div>
+      <div id="lessons-list"></div>
+    </div>
+
+    <div class="detail-pane" id="detail-pane">
+      <div class="placeholder-msg">اختر درسًا لعرض مراحله</div>
+    </div>
+
+  </div>
+
+  <div class="error-banner" id="error-banner" style="display:none; position:fixed; bottom:16px; left:50%; transform:translateX(-50%); z-index:200;"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
